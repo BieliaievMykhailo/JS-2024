@@ -233,10 +233,24 @@ console.log('_________________________________');
 
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
 let books = [
-    {title:'book1', str:50, author:'author1',}
+    {title:'book1', str:50, author:'author1', genre:['detective', 'true story']},
+    {title:'book2', str:150, author:'author2', genre:'detective'},
+    {title:'book---3', str:100, author:'author3', genre:'detective'},
+    {title:'book4', str:288, author:['author2', 'author4'], genre:'detective'},
+    {title:'book5', str:256, author:'author1', genre:'detective'},
 ];
 // -знайти наібльшу книжку.
+
 // - знайти книжку/ки з найбільшою кількістю жанрів
 // - знайти книжку/ки з найдовшою назвою
+let max_book=books[0];
+for (const book of books) {
+    if (book.title.length>max_book.title.length){
+        max_book=book;
+    }
+}
+console.log(max_book);
+console.log('_________________________________');
+
 // - знайти книжку/ки які писали 2 автори
 // - знайти книжку/ки які писав 1 автор
