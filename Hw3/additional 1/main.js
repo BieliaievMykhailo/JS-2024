@@ -234,14 +234,32 @@ console.log('_________________________________');
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
 let books = [
     {title:'book1', str:50, author:'author1', genre:['detective', 'true story']},
-    {title:'book2', str:150, author:'author2', genre:'detective'},
-    {title:'book---3', str:100, author:'author3', genre:'detective'},
-    {title:'book4', str:288, author:['author2', 'author4'], genre:'detective'},
-    {title:'book5', str:256, author:'author1', genre:'detective'},
+    {title:'book2', str:150, author:['author2', 'author1'], genre:['novel', 'history']},
+    {title:'book---3', str:100, author:'author3', genre:['detective', 'true story']},
+    {title:'book4', str:288, author:['author2', 'author4'], genre:['detective', 'true story', 'thriller']},
+    {title:'book5', str:256, author:'author1', genre:['detective', 'history']},
 ];
 // -знайти наібльшу книжку.
+let max_str = books[0].str;
+for (const book of books) {
+    if (book.str>max_str){
+        max_str=book.str;
+    }
+}
+console.log(max_str);
+console.log('_________________________________');
 
 // - знайти книжку/ки з найбільшою кількістю жанрів
+let max_genre = books[0].genre.length;
+let book_with_max_genres;
+for (let j = 0; j < books.length; j++) {
+    if (books[j].genre.length>max_genre){
+        max_genre=books[j].genre.length;
+        book_with_max_genres=books[j];
+    }
+}
+console.log(book_with_max_genres);
+console.log('_________________________________');
 // - знайти книжку/ки з найдовшою назвою
 let max_book=books[0];
 for (const book of books) {
@@ -253,4 +271,16 @@ console.log(max_book);
 console.log('_________________________________');
 
 // - знайти книжку/ки які писали 2 автори
+for (const i of books) {
+    if (i.author.length === 2){
+        console.log(i);
+    }
+}
+console.log('_________________________________');
+
 // - знайти книжку/ки які писав 1 автор
+for (const i of books) {
+    if (i.author.length === 1){
+        console.log(i);
+    }
+}
