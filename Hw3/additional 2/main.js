@@ -236,16 +236,18 @@ let usersList = [
 			* за допомоги стилів, побудувати сітку по 2 об'єкта в лінію
 			*
 			* */
-<!--template 1.1-->
-// <div class="users-box">
-//     <div class="user-block">
-//         <h2>ID - NAME - USERNAME </h2>
-//         <h3>EMAIL - PHONE</h3>
-//         <div class="address-block">
-//             <p>City - ADDRESS.CITY</p>
-//             <p>Street - ADDRESS.STREET</p>
-//             <p>Suite - ADDRESS.SUITE</p>
-//             <p>Zip code - ADDRESS.ZIPCODE</p>
-//         </div>
-//
-//     </div>
+
+for (const usersListElement of usersList) {
+    document.write(`<div class="users-box">`);
+        document.write(`<div class="user-block">`);
+            document.write(`<h2>${usersListElement.id} - ${usersListElement.name} - ${usersListElement.username}</h2>`);
+            document.write(`<h3>${usersListElement.email} - ${usersListElement.phone}</h3>`);
+            document.write(`<div class="address-block">`);
+                document.write(`<p>City - ${usersListElement.address.city}</p>`);
+                document.write(`<p>Street - ${usersListElement.address.street}</p>`);
+                document.write(`<p>Suite - ${usersListElement.address.suite}</p>`);
+                document.write(`<p>Zip code - ${usersListElement.address.zipcode}</p>`);
+            document.write(`</div>`);
+        document.write(`</div>`);
+    document.write(`</div>`);
+}
