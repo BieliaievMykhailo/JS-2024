@@ -233,11 +233,11 @@ console.log('_________________________________');
 
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
 let books = [
-    {title:'book1', str:50, author:'author1', genre:['detective', 'true story']},
+    {title:'book1', str:50, author:['author1'], genre:['detective', 'true story']},
     {title:'book2', str:150, author:['author2', 'author1'], genre:['novel', 'history']},
-    {title:'book---3', str:100, author:'author3', genre:['detective', 'true story']},
+    {title:'book---3', str:100, author:['author3'], genre:['detective', 'true story']},
     {title:'book4', str:288, author:['author2', 'author4'], genre:['detective', 'true story', 'thriller']},
-    {title:'book5', str:256, author:'author1', genre:['detective', 'history']},
+    {title:'book5', str:256, author:['author1'], genre:['detective', 'history']},
 ];
 // -знайти наібльшу книжку.
 let max_str = books[0].str;
