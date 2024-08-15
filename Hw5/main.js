@@ -79,7 +79,7 @@ let arr3 = [
     {id: 4, name: 'ira', age: 26},
 ];
 
-const printArrOfObj=(arr)=> {
+const printArrOfObj = (arr) => {
     for (let i = 0; i < arr.length; i++) {
         document.write(`<div>`);
         document.write(`<p>id -${arr[i].id}, name: ${arr[i].name}, age -${arr[i].age}.</p>`);
@@ -92,7 +92,7 @@ printArrOfObj(arr3);
 // - створити функцію яка повертає найменьше число з масиву
 let arr4 = [-23, 2, 3, 4, 5, 56, -40, 0, 15, 45];
 
-const minNum=(arr) =>{
+const minNum = (arr) => {
     let min = arr[0];
     for (const minElement of arr) {
         if (minElement < min) {
@@ -107,7 +107,7 @@ document.write(`<br>`, '_______________________________', `<br>`);
 // #EKRNVPM
 // - створити функцію sum(arr) яка приймає масив чисел, сумує значення елементів масиву та повертає його.
 // Приклад sum([1,2,10]) //->13
-const sumArr=(arr) =>{
+const sumArr = (arr) => {
     let sum = 0;
     for (const arrElement of arr) {
         sum = sum + arrElement;
@@ -121,7 +121,7 @@ document.write(`<br>`, '_______________________________', `<br>`);
 // #kpsbSQCt2Lf
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями значення у відповідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
-const swapArr=(arr, index1, index2) =>{
+const swapArr = (arr, index1, index2) => {
     let temp = arr[index1];
     arr[index1] = arr[index2];
     arr[index2] = temp;
@@ -134,7 +134,7 @@ document.write(`<br>`, '_______________________________', `<br>`);
 // #mkGDenYnNjn
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:25},{currency:'EUR',value:42}],'USD') // => 400
-const exchange=(sumUAH, currencyValues, exchangeCurrency) =>{
+const exchange = (sumUAH, currencyValues, exchangeCurrency) => {
     let total;
     if (exchangeCurrency === 'USD') {
         total = sumUAH / currencyValues[0].value;
