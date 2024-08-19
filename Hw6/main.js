@@ -169,6 +169,26 @@ console.log('______________________________________');
 //     hearts:[],
 //     clubs:[]
 // }
+let cards = deckOfCards.reduce((accumulator, card) => {
+    if (card.cardSuit === 'spade') {
+        accumulator.spades.push(card);
+    } else if (card.cardSuit === 'diamond') {
+        accumulator.diamonds.push(card);
+    } else if (card.cardSuit === 'heart') {
+        accumulator.hearts.push(card);
+    } else {
+        accumulator.clubs.push(card);
+    }
+    return accumulator;
+}, {
+    spades: [],
+    diamonds: [],
+    hearts: [],
+    clubs: []
+});
+console.log(cards);
+console.log('______________________________________');
+
 // =========================
 // #4LJn7zBx
 // взяти з arrays.js масив coursesArray
