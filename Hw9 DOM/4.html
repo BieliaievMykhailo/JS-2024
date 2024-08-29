@@ -28,8 +28,9 @@
         const div = document.createElement('div');
         const h1 = document.createElement('h1');
         const p = document.createElement('p');
-
-        div.innerText = `${coursesAndDurationArrayElement.title} ${coursesAndDurationArrayElement.monthDuration}`;
+        h1.innerText = coursesAndDurationArrayElement.title;
+        p.innerText = coursesAndDurationArrayElement.monthDuration;
+        div.append(h1, p);
         document.body.appendChild(div);
     }
 </script>
