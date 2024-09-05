@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <input id="xxx" type="number">
+    <div id="result"></div>
+
+<script>
+   const input = document.getElementById('xxx');
+   const resultDiv = document.getElementById('result');
+   input.oninput = function (){
+       const kilos = +this.value;
+       let result = kilos*2.2;
+       resultDiv.innerText = result;
+   };
+</script>
+</body>
+</html>

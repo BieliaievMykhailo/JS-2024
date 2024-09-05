@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="tableGeneratorForm">
+    <input type="number" name="lines">
+    <input type="number" name="cells">
+    <input type="text" name="data">
+    <button>Generate</button>
+</form>
+<table id="table">
+
+</table>
+<script>
+    // #kUSgFqWY
+    // Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+    //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+const tableGeneratorForm = document.forms['tableGeneratorForm'];
+const table = document.getElementById('table');
+
+const linesValues = +tableGeneratorForm.lines.value;
+const cellsValues = +tableGeneratorForm.cells.value;
+const dataValues = +tableGeneratorForm.data.value;
+
+
+</script>
+</body>
+</html>
