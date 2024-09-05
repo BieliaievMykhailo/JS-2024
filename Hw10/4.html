@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="target"></div>
+<script>
+    // #2VaLt4vDczH
+    // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код,
+    //     який при кожному перезавантажені сторінки буде додавати до неї +1
+let currentNumber = +localStorage.getItem('number');
+currentNumber = currentNumber +1;
+localStorage.setItem('number', currentNumber);
+document.getElementById('target').innerText = currentNumber;
+</script>
+</body>
+</html>
